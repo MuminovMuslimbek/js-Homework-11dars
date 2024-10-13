@@ -27,7 +27,7 @@
             <h2>Oson masalalar:</h2>
             <div class="card_main">
                 <div class="card">
-                    <h3><span id="problem1" style="color: #fff;"> 1-oson.</span><br> Funksiya yozing, bu funksiya berilgan sonning kvadratini qaytarsin.</h3>
+                    <h3><span style="color: #fff;"> 1-oson.</span><br> Funksiya yozing, bu funksiya berilgan sonning kvadratini qaytarsin.</h3>
                     <input id="inputNum1-easy" type="number" required placeholder="Sonni kiriting:">
                     <div class="result_text">
                         <p>Result:</p>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3><span id="problem2" style="color: #fff;"> 2-oson.</span><br> Funksiya yozing, bu funksiya berilgan ikkita sonning yig'indisini qaytarsin.</h3>
+                    <h3><span style="color: #fff;"> 2-oson.</span><br> Funksiya yozing, bu funksiya berilgan ikkita sonning yig'indisini qaytarsin.</h3>
                     <input id="inputNum2-easy1" type="number" required placeholder="Birinchi sonni kiriting:">
                     <input id="inputNum2-easy2" type="number" required placeholder="Ikkinchi sonni kiriting:">
                     <div class="result_text">
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3><span id="problem3" style="color: #fff;"> 3-oson.</span><br> Funksiya yozing, bu funksiya foydalanuvchi nomini qabul qilib, unga "Salom, [ism]" degan matnni qaytarsin</h3>
+                    <h3><span style="color: #fff;"> 3-oson.</span><br> Funksiya yozing, bu funksiya foydalanuvchi nomini qabul qilib, unga "Salom, [ism]" degan matnni qaytarsin</h3>
                     <input id="inputNum3-easy" type="text" required placeholder="Ismingizni kiriting:">
                     <div class="result_text">
                         <p>Result:</p>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3><span id="problem4" style="color: #fff;"> 4-oson.</span><br> Funksiya yozing, bu funksiya ikki sondan kattasini topib qaytarsin.</h3>
+                    <h3><span style="color: #fff;"> 4-oson.</span><br> Funksiya yozing, bu funksiya ikki sondan kattasini topib qaytarsin.</h3>
                     <input id="inputNum4-easy1" type="number" required placeholder="Birinchi sonni kiriting:">
                     <input id="inputNum4-easy2" type="number" required placeholder="Ikkinchi sonni kiriting:">
                     <div class="result_text">
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3><span style="color: #fff;"> 6-oson.</span><br> Funksiya yozing, bu funksiya massiv ichidagi barcha sonlarni qo'shib, umumiy yig'indini qaytarsin.</h3>
+                    <h3><span style="color: #fff;"> 6-oson.</span><br> Funksiya yozing, bu funksiya berilgan son musbat yoki manfiy ekanligini aniqlasin va natijani qaytarsin.</h3>
                     <input id="inputNum6-easy" type="number" required placeholder="Sonni kiriting">
                     <div class="result_text">
                         <p>Result:</p>
@@ -112,9 +112,246 @@
                         <button id="clear7">Clear</button>
                     </div>
                 </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 8-oson.</span><br> Funksiya yozing, bu funksiya berilgan ikki stringni birlashtirib, bitta string ko'rinishida qaytarsin.
+                    </h3>
+                    <input id="inputNum8-easy1" type="text" required placeholder="Birinchi stringni kiriting:">
+                    <input id="inputNum8-easy2" type="text" required placeholder="Ikkinchi stringni kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num8-easy">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result8Easy" readonly></textarea>
+                        <button id="clear8">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 9-oson.</span><br> Funksiya yozing, bu funksiya berilgan massivdan eng kichik elementni qaytarsin.
+                    </h3>
+                    <input type="number" id="inputNum9-easy" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num9-easy">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result9Easy" readonly></textarea>
+                        <button id="clear9">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 10-oson.</span><br>Funksiya yozing, bu funksiya berilgan stringni teskari holatga keltirib, natijani qaytarsin.</h3>
+                    <input id="inputNum10-easy" type="text" required placeholder="Ismingizni kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num10-easy">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result10Easy" readonly></textarea>
+                        <button id="clear10">Clear</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
+            <h2>Massiv va funksiyalar:</h2>
+            <div class="card_main">
+                <div class="card">
+                    <h3><span style="color: #fff;"> 1-difficult.</span><br> Funksiya yozing, bu funksiya berilgan massivdagi barcha sonlarni ekranga chiqarib bersin.
+                    </h3>
+                    <input type="text" id="inputNum1-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num1-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result1Difficult" readonly></textarea>
+                        <button id="clear1Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 2-difficult.</span><br> Funksiya yozing, bu funksiya massivdagi eng katta sonni topib qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum2-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num2-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result2Difficult" readonly></textarea>
+                        <button id="clear2Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 3-difficult.</span><br> Funksiya yozing, bu funksiya berilgan massivning uzunligini qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum3-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num3-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result3Difficult" readonly></textarea>
+                        <button id="clear3Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 4-difficult.</span><br> Funksiya yozing, bu funksiya berilgan massivdagi barcha elementlarning yig'indisini hisoblasin va qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum4-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num4-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result4Difficult" readonly></textarea>
+                        <button id="clear4Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 5-difficult.</span><br> Funksiya yozing, bu funksiya massiv ichida berilgan element necha marta uchrashganini qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum5-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <input type="text" id="searchElement" placeholder="Qidirilayotgan elementni kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num5-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result5Difficult" readonly></textarea>
+                        <button id="clear5Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 6-difficult.</span><br> Funksiya yozing, bu funksiya massivdagi toq sonlarni yangi massivga ajratib qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum6-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num6-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result6Difficult" readonly></textarea>
+                        <button id="clear6Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 7-difficult.</span><br> Funksiya yozing, bu funksiya massiv ichidagi elementlarni teskari tartibda qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum7-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num7-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result7Difficult" readonly></textarea>
+                        <button id="clear7Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 8-difficult.</span><br> Funksiya yozing, bu funksiya berilgan massiv ichidan faqat manfiy sonlarni ajratib olsin va yangi massivda qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum8-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num8-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result8Difficult" readonly></textarea>
+                        <button id="clear8Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 9-difficult.</span><br> Funksiya yozing, bu funksiya berilgan massivning oxirgi elementini olib tashlasin va yangilangan massivni qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum9-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num9-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result9Difficult" readonly></textarea>
+                        <button id="clear9Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 10-difficult.</span><br>Funksiya yozing, bu funksiya berilgan massivga yangi element qo'shish funksiyasini amalga oshirsin.
+                    </h3>
+                    <input type="text" id="inputNum10-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num10-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result10Difficult" readonly></textarea>
+                        <button id="clear10Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 11-difficult.</span><br> Funksiya yozing, bu funksiya berilgan ikki massivni birlashtirib, yangi massiv qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum11-difficult1" placeholder="Birinchi massivni kiriting (vergul bilan)">
+                    <input type="text" id="inputNum11-difficult2" placeholder="Ikkinchi massivni kiriting (vergul bilan)">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num11-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result11Difficult" readonly></textarea>
+                        <button id="clear11Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 12-difficult.</span><br> Funksiya yozing, bu funksiya massiv ichidagi sonlarning kvadratlarini hisoblab, yangi massivda qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum12-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num12-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result12Difficult" readonly></textarea>
+                        <button id="clear12Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 13-difficult.</span><br> Funksiya yozing, bu funksiya berilgan massiv ichidagi juft sonlarni o'chirib, yangi massiv qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum13-difficult" placeholder="Sonlarni vergul bilan kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num13-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result13Difficult" readonly></textarea>
+                        <button id="clear13Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 14-difficult.</span><br> Funksiya yozing, bu funksiya berilgan massiv ichidagi stringlarni katta harfga o'zgartirib qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum14-difficult" placeholder="Bironta string kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num14-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result14Difficult" readonly></textarea>
+                        <button id="clear14Difficult">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 15-difficult.</span><br> Funksiya yozing, bu funksiya berilgan massiv ichidagi stringlarni katta harfga o'zgartirib qaytarsin.
+                    </h3>
+                    <input type="text" id="inputNum15-difficult" placeholder="Bironta string kiriting">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num15-difficult">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result15Difficult" readonly></textarea>
+                        <button id="clear15Difficult">Clear</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
