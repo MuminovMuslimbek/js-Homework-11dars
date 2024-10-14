@@ -1,47 +1,68 @@
-// Search tizimi:\
+// Search tizimi:
 // Buni o`zim qiziqib qo`shimcha sifatida qildim:
 const searchInput = document.getElementById("search");
+const titles = document.querySelectorAll("h1, h2");
+const notFound = document.getElementById("notFound");
+const searchTitle = document.getElementById("searchTitile");
 const cards = document.querySelectorAll(".card");
+
 searchInput.addEventListener("input", function() {
     let searchQuery = searchInput.value.toLowerCase();
     let found = false;
+
+    titles.forEach(title => {
+        title.style.display = "none";
+    });
+
     cards.forEach(card => {
         let h3Text = card.querySelector("h3").textContent.toLowerCase();
-        if (h3Text.includes(searchQuery)) {
-            card.style.display = "block";
+        if (h3Text.includes(searchQuery) && searchQuery !== "") {
+            card.style.display = "flex";
             found = true;
+            console.log(card.id);
         } else {
             card.style.display = "none";
         }
     });
+
     if (searchQuery === "") {
         cards.forEach(card => {
-            card.style.display = "block";
+            card.style.display = "flex";
         });
-    }
-    if (!found && searchQuery !== "") {
-        console.log("Xatolik: Natija topilmadi!");
+        titles.forEach(title => {
+            title.style.display = "flex";
+        });
+        searchTitle.style.display = "none";
+        notFound.style.display = "none";
+    } else if (found) {
+        searchTitle.style.display = "flex";
+        notFound.style.display = "none";
+    } else {
+        searchTitle.style.display = "none";
+        notFound.style.display = "flex";
+        notFound.querySelector("h2").style.display = "block"; // h2 ko'rsatish
     }
 });
+
 document.getElementById("searchForm").addEventListener("submit", function(event) {
     event.preventDefault();
 });
-
-// Agar searchdan keyin sayt hunuk bo`lib qolsa refresh qilvorasiz va nimaga searchdan keyin bunaqa yopishib qolishini hech topa olmadim, agar iloji bo`lsa nega sshunday bo`lib turganini aytvorsangiz erp ga iltimos
-
 
 // Oson masalalar
 // N1:
 function difficultEasy(num1easy) {
     return num1easy * num1easy;
 }
-document.getElementById("num1-easy").addEventListener("click", function() {
-    let num1Easy = document.getElementById("inputNum1-easy").value;
-    let res1Easy = num1Easy.trim() === "" || isNaN(num1Easy) ?
-        "Sonni qayta kiriting!" : Num1Easy(num1Easy);
+
+document.getElementById("num1-easy").addEventListener("click", () => {
+    let num1Easy = Number(document.getElementById("inputNum1-easy").value.trim());
+    let res1Easy = isNaN(num1Easy) ?
+        "Sonni qayta kiriting!" :
+        difficultEasy(num1Easy); // bu yerda funksiyani chaqiryapmiz
 
     document.getElementById("result1Easy").value = res1Easy;
-})
+});
+
 
 function clearFields1() {
     document.getElementById("inputNum1-easy").value = "";
