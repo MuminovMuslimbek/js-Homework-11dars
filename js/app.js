@@ -58,7 +58,7 @@ document.getElementById("num1-easy").addEventListener("click", () => {
     let num1Easy = Number(document.getElementById("inputNum1-easy").value.trim());
     let res1Easy = isNaN(num1Easy) ?
         "Sonni qayta kiriting!" :
-        difficultEasy(num1Easy); // bu yerda funksiyani chaqiryapmiz
+        difficultEasy(num1Easy);
 
     document.getElementById("result1Easy").value = res1Easy;
 });
@@ -703,3 +703,56 @@ function clearFields15Difficult() {
 }
 
 document.getElementById("clear15Difficult").addEventListener("click", clearFields15Difficult);
+
+// Qoshimcha vazifa:
+// N1:
+function difficult1Addition(num1addition) {
+    return num1addition * num1addition;
+}
+document.getElementById("num1-addition").addEventListener("click", () => {
+    let num1Addition = Number(document.getElementById("inputNum1-addition").value.trim());
+    let res1Addition = isNaN(num1Addition) ?
+        "Sonni qayta kiriting!" :
+        difficult1Addition(num1Addition);
+
+    document.getElementById("result1Addition").value = res1Addition;
+});
+
+function clearFields1add() {
+    document.getElementById("inputNum1-addition").value = "";
+    document.getElementById("result1Addition").value = "";
+}
+document.getElementById("clear1add").addEventListener("click", clearFields1add);
+
+// N2:
+function filterOutValue(arrAdd2, NumValueToRemoveAdd2) {
+    return arrAdd2.filter(item => item !== NumValueToRemoveAdd2);
+}
+
+function num2Additionres() {
+    let num2Additionres = document.getElementById("inputNum2-addition").value.trim();
+    let NumValueToRemoveAdd2 = Number(document.getElementById("valueToRemove").value.trim());
+
+    if (num2Additionres === "") {
+        document.getElementById("result2Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+
+    let num2Addition = num2Additionres.split(",").map(Number);
+    let resnum2Additionres = num2Addition.every(num => !isNaN(num)) ?
+        filterOutValue(num2Addition, NumValueToRemoveAdd2).join(", ") : "Massivni qayta kiriting!";
+
+    document.getElementById("result2Addition").value = resnum2Additionres;
+}
+
+document.getElementById("num2-addition").addEventListener("click", num2Additionres);
+
+function clearFields2Addition() {
+    document.getElementById("inputNum2-addition").value = "";
+    document.getElementById("result2Addition").value = "";
+    document.getElementById("valueToRemove").value = "";
+}
+
+document.getElementById("clear2Addition").addEventListener("click", clearFields2Addition);
+
+// N3
