@@ -60,6 +60,7 @@ document.getElementById("num1-easy").addEventListener("click", () => {
         "Sonni qayta kiriting!" :
         difficultEasy(num1Easy);
 
+
     document.getElementById("result1Easy").value = res1Easy;
 });
 
@@ -706,23 +707,32 @@ document.getElementById("clear15Difficult").addEventListener("click", clearField
 
 // Qoshimcha vazifa:
 // N1:
-function difficult1Addition(num1addition) {
-    return num1addition * num1addition;
+function DifficValues1(resDif1) {
+    return resDif1.map(num => num * 2);
 }
-document.getElementById("num1-addition").addEventListener("click", () => {
-    let num1Addition = Number(document.getElementById("inputNum1-addition").value.trim());
-    let res1Addition = isNaN(num1Addition) ?
-        "Sonni qayta kiriting!" :
-        difficult1Addition(num1Addition);
 
-    document.getElementById("result1Addition").value = res1Addition;
-});
+function num1Additionres() {
+    let num1Additionres = document.getElementById("inputNum1-addition").value.trim();
 
-function clearFields1add() {
+    if (num1Additionres === "") {
+        document.getElementById("result1Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+    let num1Addition = num1Additionres.split(",").map(Number);
+    let resnum1Additionres = num1Addition.every(num => !isNaN(num)) ?
+        DifficValues1(num1Addition).join(", ") : "Massivni qayta kiriting!";
+
+    document.getElementById("result1Addition").value = resnum1Additionres;
+}
+
+document.getElementById("num1-addition").addEventListener("click", num1Additionres);
+
+function clearFields1Addition() {
     document.getElementById("inputNum1-addition").value = "";
     document.getElementById("result1Addition").value = "";
 }
-document.getElementById("clear1add").addEventListener("click", clearFields1add);
+document.getElementById("clear1add").addEventListener("click", clearFields1Addition);
+
 
 // N2:
 function filterOutValue(arrAdd2, NumValueToRemoveAdd2) {
@@ -756,3 +766,262 @@ function clearFields2Addition() {
 document.getElementById("clear2Addition").addEventListener("click", clearFields2Addition);
 
 // N3
+function DifficValues3(resDif3) {
+    return resDif3.sort();
+}
+
+function num3Additionres() {
+    let num3Additionres = document.getElementById("inputNum3-addition").value.trim();
+
+    if (num3Additionres === "") {
+        document.getElementById("result3Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+    let num3Addition = num3Additionres.split(",").map(Number);
+    let resnum3Additionres = num3Addition.every(num => !isNaN(num)) ?
+        DifficValues3(num3Addition).join(", ") : "Massivni qayta kiriting!";
+
+    document.getElementById("result3Addition").value = resnum3Additionres;
+}
+
+document.getElementById("num3-addition").addEventListener("click", num3Additionres);
+
+function clearFields3Addition() {
+    document.getElementById("inputNum3-addition").value = "";
+    document.getElementById("result3Addition").value = "";
+}
+document.getElementById("clear3add").addEventListener("click", clearFields3Addition);
+
+// N4:
+function DifficValues4(resDif4) {
+    let min = resDif4[0];
+    let max = resDif4[0];
+
+    for (let i = 1; i < resDif4.length; i++) {
+        if (resDif4[i] < min) {
+            min = resDif4[i];
+        }
+        if (resDif4[i] > max) {
+            max = resDif4[i];
+        }
+    }
+
+    return [min, max];
+}
+
+function num4Additionres() {
+    let num4Additionres = document.getElementById("inputNum4-addition").value.trim();
+
+    if (num4Additionres === "") {
+        document.getElementById("result4Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+
+    let num4Addition = num4Additionres.split(",").map(Number);
+    let resnum4Additionres = num4Addition.every(num => !isNaN(num)) ?
+        DifficValues4(num4Addition).join(", ") : "Massivni qayta kiriting!";
+
+    document.getElementById("result4Addition").value = resnum4Additionres;
+}
+
+document.getElementById("num4-addition").addEventListener("click", num4Additionres);
+
+function clearFields4Addition() {
+    document.getElementById("inputNum4-addition").value = "";
+    document.getElementById("result4Addition").value = "";
+}
+document.getElementById("clear4add").addEventListener("click", clearFields4Addition);
+
+// N5:
+function averageValue5(resDif5) {
+    let sumDifficult = 0;
+    for (let i = 0; i < resDif5.length; i++) {
+        sumDifficult += resDif5[i];
+    }
+    return sumDifficult / resDif5.length;
+}
+
+function num5Additionres() {
+    let num5Additionres = document.getElementById("inputNum5-addition").value.trim();
+
+    if (num5Additionres === "") {
+        document.getElementById("result5Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+
+    let num5Addition = num5Additionres.split(",").map(Number);
+    let resnum5Additionres = num5Addition.every(num => !isNaN(num)) ?
+        averageValue5(num5Addition).toFixed(2) : "Massivni qayta kiriting!";
+
+    document.getElementById("result5Addition").value = resnum5Additionres;
+}
+
+document.getElementById("num5-addition").addEventListener("click", num5Additionres);
+
+function clearFields5Addition() {
+    document.getElementById("inputNum5-addition").value = "";
+    document.getElementById("result5Addition").value = "";
+}
+document.getElementById("clear5add").addEventListener("click", clearFields5Addition);
+
+// N6:
+function convertToStrings6(resDif6) {
+    return resDif6.map(num => num.toString());
+}
+
+function num6Additionres() {
+    let num6Additionres = document.getElementById("inputNum6-addition").value.trim();
+
+    if (num6Additionres === "") {
+        document.getElementById("result6Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+
+    let num6Addition = num6Additionres.split(",").map(Number);
+    let resnum6Additionres = num6Addition.every(num => !isNaN(num)) ?
+        convertToStrings6(num6Addition).join(", ") : "Massivni qayta kiriting!";
+
+    document.getElementById("result6Addition").value = resnum6Additionres;
+}
+
+document.getElementById("num6-addition").addEventListener("click", num6Additionres);
+
+function clearFields6Addition() {
+    document.getElementById("inputNum6-addition").value = "";
+    document.getElementById("result6Addition").value = "";
+}
+document.getElementById("clear6add").addEventListener("click", clearFields6Addition);
+
+// N7:
+function separateEvenOdd7(resDif7) {
+    let addNum1 = [];
+    let addNum2 = [];
+
+    for (let numDifRes of resDif7) {
+        if (numDifRes % 2 === 0) {
+            addNum1.push(numDifRes);
+        } else {
+            addNum2.push(numDifRes);
+        }
+    }
+
+    return { even: addNum1, odd: addNum2 };
+}
+
+function num7Additionres() {
+    let num7Additionres = document.getElementById("inputNum7-addition").value.trim();
+
+    if (num7Additionres === "") {
+        document.getElementById("result7Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+
+    let num7Addition = num7Additionres.split(",").map(Number);
+    let resnum7Additionres = num7Addition.every(num => !isNaN(num)) ?
+        separateEvenOdd7(num7Addition) : "Massivni qayta kiriting!";
+
+    document.getElementById("result7Addition").value =
+        `Juftlar: ${resnum7Additionres.even.join(", ")}; Toqlar: ${resnum7Additionres.odd.join(", ")}`;
+}
+
+document.getElementById("num7-addition").addEventListener("click", num7Additionres);
+
+function clearFields7Addition() {
+    document.getElementById("inputNum7-addition").value = "";
+    document.getElementById("result7Addition").value = "";
+}
+document.getElementById("clear7add").addEventListener("click", clearFields7Addition);
+
+// N8:
+function sortArray8(resDif8) {
+    return resDif8.sort((a, b) => a - b);
+}
+
+function num8Additionres() {
+    let num8Additionres = document.getElementById("inputNum8-addition").value.trim();
+
+    if (num8Additionres === "") {
+        document.getElementById("result8Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+
+    let num8Addition = num8Additionres.split(",").map(Number);
+    let resnum8Additionres = num8Addition.every(num => !isNaN(num)) ?
+        sortArray8(num8Addition) : "Massivni qayta kiriting!";
+
+    document.getElementById("result8Addition").value = resnum8Additionres.join(", ");
+}
+
+document.getElementById("num8-addition").addEventListener("click", num8Additionres);
+
+function clearFields8Addition() {
+    document.getElementById("inputNum8-addition").value = "";
+    document.getElementById("result8Addition").value = "";
+}
+document.getElementById("clear8add").addEventListener("click", clearFields8Addition);
+
+// N9:
+function concatenateArray9(resDif9) {
+    return resDif9.join("");
+}
+
+function num9Additionres() {
+    let num9Additionres = document.getElementById("inputNum9-addition").value.trim();
+
+    if (num9Additionres === "") {
+        document.getElementById("result9Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+
+    let num9Addition = num9Additionres.split(",").map(str => str.trim());
+    let resnum9Additionres = concatenateArray9(num9Addition);
+
+    document.getElementById("result9Addition").value = resnum9Additionres;
+}
+
+document.getElementById("num9-addition").addEventListener("click", num9Additionres);
+
+function clearFields9Addition() {
+    document.getElementById("inputNum9-addition").value = "";
+    document.getElementById("result9Addition").value = "";
+}
+document.getElementById("clear9add").addEventListener("click", clearFields9Addition);
+
+// N10:
+function findMaxDifference10(resDif10) {
+    let min = resDif10[0];
+    let max = resDif10[0];
+
+    for (let i = 1; i < resDif10.length; i++) {
+        if (resDif10[i] < min) {
+            min = resDif10[i];
+        }
+        if (resDif10[i] > max) {
+            max = resDif10[i];
+        }
+    }
+    return max - min;
+}
+
+function num10Additionres() {
+    let num10Additionres = document.getElementById("inputNum10-addition").value.trim();
+
+    if (num10Additionres === "") {
+        document.getElementById("result10Addition").value = "Massivni qayta kiriting!";
+        return;
+    }
+
+    let num10Addition = num10Additionres.split(",").map(Number);
+    let resnum10Additionres = num10Addition.every(num => !isNaN(num)) ?
+        findMaxDifference10(num10Addition) : "Massivni qayta kiriting!";
+
+    document.getElementById("result10Addition").value = resnum10Additionres;
+}
+
+document.getElementById("num10-addition").addEventListener("click", num10Additionres);
+
+function clearFields10Addition() {
+    document.getElementById("inputNum10-addition").value = "";
+    document.getElementById("result10Addition").value = "";
+}
+document.getElementById("clear10add").addEventListener("click", clearFields10Addition);
